@@ -12,7 +12,8 @@ dependencies:
   flutter:
     sdk: flutter
   universal_io: ^2.0.4
-
+  fk_user_agent: ^2.1.0
+  
 dev_dependencies:
   flutter_test:
     sdk: flutter

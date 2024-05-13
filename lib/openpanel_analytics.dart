@@ -2,6 +2,7 @@ library openpanel_analytics;
 
 import 'package:flutter/foundation.dart';
 import 'package:universal_io/io.dart'; // instead of 'dart:io';
+import 'package:fk_user_agent/fk_user_agent.dart';
 import 'dart:convert';
 
 /// Openpanel class. Use the constructor to set the parameters.
@@ -26,6 +27,11 @@ class Openpanel {
     if (!enabled) {
       return 0;
     }
+
+    // Get user agent
+    FkUserAgent.init();
+    userAgent = FkUserAgent.userAgent!;
+
 
     // Post-edit parameters
     int lastCharIndex = serverUrl.length - 1;
